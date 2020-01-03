@@ -1,8 +1,9 @@
 {
   "name": "abramenal.com",
   "version": "1.0.0",
-  "description": "abramenal's profile",
+  "description": "abramenal.com website",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --port=3000",
