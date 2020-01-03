@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Section, LeftCol, RightCol } from './styled';
+import { Section, LeftCol, RightCol } from './styled';
 import { Header, Footer, Copyright } from '../../components';
 
 const Home = () => (
