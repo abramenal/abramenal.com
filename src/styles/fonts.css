@@ -3,6 +3,8 @@
   font-style: normal;
   font-weight: normal;
   src: local('Bold'),
+    url('./fonts/bold.woff2') format('woff2'),
     url('./fonts/bold.woff') format('woff'),
-    url('./fonts/bold.otf') format('otf');
+    url('./fonts/bold.otf') format('otf'),
+    url('./fonts/bold.ttf') format("truetype");
   }
