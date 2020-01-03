@@ -1,0 +1,33 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/builds
+    docker:
+      - image: circleci/node:12.14.0
+    steps:
+      - checkout
+      - run:
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install npm
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Lint
+          command: npm run lint
+      - run:
+          name: Test
+          command: npm test
+
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
