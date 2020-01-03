@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bold'),
+    url('./fonts/bold.woff') format('woff'),
+    url('./fonts/bold.otf') format('otf');
+  }
