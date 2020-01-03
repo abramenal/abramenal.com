@@ -5,7 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --out-dir public",
+    "deploy": "now ./public --token=$NOW_TOKEN --prod",
     "dev": "parcel index.html --port=3000",
     "lint": "eslint index.js src/ --ext=js,jsx",
     "start": "npm run dev",
@@ -34,6 +35,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^3.1.0",
+    "now": "^16.7.0",
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
